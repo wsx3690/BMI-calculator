@@ -1,0 +1,372 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+  /* font-family: SFNSDisplay; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: #424242;
+  background: rgba(207, 207, 207, 0.274);
+
+}
+.wrap{
+  margin: 0px auto;
+}
+
+.header{
+  background: #424242;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.header>div{
+  margin: 92px 0px;
+}
+
+.header>img{
+ width: 117px;
+ height: 117px;
+}
+
+
+.header form{
+  margin: 91px 0px;
+  display: flex;
+  margin-left: 97px;
+}
+.header form label{
+  display: block;
+  /* font-family: AppleSystemUIFont; */
+  font-size: 18px;
+  color: #FFD366;
+}
+.header form input{
+  font-size: 24px;
+  color: #FFFFFF;
+  background: rgba(255,255,255,0.18);
+  border: 2px solid #FFD366;
+  border-radius: 10px;
+  width: 250px;
+  height: 40px;
+  margin: 7px auto 23px;
+}
+.header form .submit{
+  background: #FFD366;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  /* font-family: PingFangTC-Regular; */
+  margin-left: 53px;
+  text-align: center;
+  color: #424242;
+}
+
+.header form .submit:hover{
+  background: #FFD366;
+  box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+}
+.header form .submit:active{
+  background: #DEA821;
+}
+.dataRecord{
+  text-align: center;
+  width: 624px;
+  margin: 48px auto 74px;
+}
+
+.calculate{
+  width: 400px;
+  padding-top: 15px;
+}
+
+.dataRecord ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 36px 0px 16px;
+  height: 62px;
+  /* font-family: SFNSDisplay; */
+  font-size: 20px;
+  color: #4A4A4A;
+  background: #FFFFFF;
+}
+
+.dataRecord ul li{
+  width: 20%;
+  text-align: left;
+  padding: 0 12px 0 11px;
+}
+.dataRecord ul li:last-child{
+  text-align: right;
+}
+
+
+.dataRecord ul+ul{
+  margin-top: 0px;
+}
+.dataRecord span{
+  /* font-family: AppleSystemUIFont; */
+  font-size: 12px;
+}
+
+.footer{
+  background: #FFD366;
+  text-align: center;
+}
+
+.footer img{
+  width: 55px;
+  height: 55px;
+  margin: 18px auto;
+  
+}
+
+.resultContainer{
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  margin-left: 51px;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  margin-right: 18px;
+  height: 123px;
+  width: 123px;
+  border-radius: 61px;
+  position: relative;
+}
+
+.result a{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.result a img{
+  margin-bottom: 5px;
+}
+
+.result p+p{
+  font-size: 14px;
+}
+
+.normal{
+  color: #86D73F;
+}
+
+.normal-radius{
+  color: #86D73F;
+  border: 6px solid #86D73F; 
+}
+
+.normal-renew{
+  background: #86D73F;
+  border: 3px solid #424242;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.normal-border{
+  border-left: 7px solid #86D73F;
+  box-shadow: 2px 0 3px 0 rgba(134,215,63,0.29);
+}
+
+.light{
+  color: #31BAF9;
+}
+
+.light-radius{
+  color: #31BAF9;
+  border: 6px solid #31BAF9;  
+}
+
+.light-renew{
+  background: #31BAF9;
+  border: 3px solid #424242;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.light-border{
+  border-left: 7px solid #31BAF9;
+  box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+}
+
+.heavy{
+  color: #FF982D;
+}
+
+.heavy-radius{
+  color: #FF982D;
+  border: 6px solid #FF982D;  
+}
+
+.heavy-renew{
+  background: #FF982D;
+  border: 3px solid #424242;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.heavy-border{
+  border-left: 7px solid #FF982D;
+  box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29);
+}
+
+.lightHeavy{
+  color: #FF6C03;
+}
+
+.lightHeavy-radius{
+  color: #FF6C03;
+  border: 6px solid #FF6C03;  
+}
+
+.lightHeavy-renew{
+  background: #FF6C03;
+  border: 3px solid #424242;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.lightHeavy-border{
+  border-left: 7px solid #FF6C03;
+  box-shadow: 2px 0 3px 0 rgba(255,108,3,0.29);
+}
+
+.severeHeavy{
+  color: #FF1200;
+}
+
+.severeHeavy-radius{
+  color: #FF1200;
+  border: 6px solid #FF1200;  
+}
+
+.severeHeavy-renew{
+  background: #FF1200;
+  border: 3px solid #424242;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.severeHeavy-border{
+  border-left: 7px solid #FF1200;
+  box-shadow: 2px 0 3px 0 rgba(255,18,0,0.29);
+}
+
+
+@media (max-width: 768px) {
+  .wrap {
+    /* margin: 30px 5%; */
+  }
+
+  .header{
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .header>div{
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .header form .submit{
+    margin: 0 auto;
+  }
+  .calculate{
+    width: 100%;
+    text-align: center;
+  }
+
+  .header form{
+    display: block;
+    margin: 0px auto;
+  }
+
+  .dataRecord{
+    width: 90%;
+  }
+
+  .dataRecord ul{
+    display: block;
+    height: auto;
+    padding: 20px ;
+  }
+
+  .dataRecord ul li{
+    display: block;
+    height: auto;
+    width: auto;
+    line-height: 1.2;
+  }
+}
+
