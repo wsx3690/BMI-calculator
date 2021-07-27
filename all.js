@@ -26,7 +26,6 @@ let BMI = 0;
 function calculate(e){
   e.preventDefault();
   BMI = (weight.value / (height.value/100 * height.value/100));
-    console.log(weight.value,height.value,BMI)
   submit.classList.add("d-none");
   resultContainer.classList.remove("d-none");
   resultContainer.classList.add("d-flex");
@@ -89,7 +88,7 @@ function calculate(e){
 }
 
 //渲染
-function render(item){
+function render(item,index){
   let record = document.createElement("ul");
 
   if(item.BMI>16 && item.BMI<18.5){
@@ -119,21 +118,35 @@ function render(item){
         </li>
         <li>
           <span>${item.date}</span>
+        </li>
+        <li>
+          <a href="#" class="delete" data-num="${index}"></a>
         </li>`;
   localStorage.setItem("record", JSON.stringify(data));
-  // init();
   return record;
   
 }
+
 
 //初始
 function init(){
   
   dataRecord.innerHTML="";
-  data.forEach(function(item){
-      dataRecord.appendChild(render(item));
+  data.forEach(function(item,index){
+      dataRecord.appendChild(render(item,index));
   });   
 }
 init();
 
+
+//刪除邏輯
+dataRecord.addEventListener('click',function(e){
+    if(e.target.getAttribute('class')!=='delete'){
+        return;
+    }
+    let num=e.target.getAttribute('data-num');
+    data.splice(num,1);
+    localStorage.setItem('record', JSON.stringify(data));
+    init();
+});
 
